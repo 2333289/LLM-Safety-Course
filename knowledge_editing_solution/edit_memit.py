@@ -70,10 +70,18 @@ def load_records(args: argparse.Namespace) -> list[dict[str, Any]]:
 
 
 def run_batch_edit(editor: Any, records: list[dict[str, Any]]) -> Any:
+    locality_inputs = {
+        "neighborhood": {
+            "prompt": [record["locality_prompt"] for record in records],
+            "ground_truth": [record["locality_ground_truth"] for record in records],
+        }
+    }
     return editor.edit(
         prompts=[record["prompt"] for record in records],
         ground_truth=[record["ground_truth"] for record in records],
         target_new=[record["target_new"] for record in records],
+        rephrase_prompts=[record["rephrase_prompt"] for record in records],
+        locality_inputs=locality_inputs,
         subject=[record.get("subject", "") for record in records],
         keep_original_weight=True,
     )

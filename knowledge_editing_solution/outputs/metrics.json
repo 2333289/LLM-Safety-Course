@@ -1,5 +1,53 @@
 {
   "metrics": {
+    "rome": {
+      "num_records": 10,
+      "ES": 1.0,
+      "PS": 0.5583,
+      "NS": 0.585,
+      "counts": {
+        "efficacy_values": 10,
+        "paraphrase_values": 10,
+        "neighborhood_values": 10
+      }
+    },
+    "memit": {
+      "num_records": 10,
+      "ES": 0.8128,
+      "PS": 0.7594,
+      "NS": 0.2108,
+      "counts": {
+        "efficacy_values": 10,
+        "paraphrase_values": 10,
+        "neighborhood_values": 10
+      }
+    }
+  },
+  "easyedit_metrics": {
+    "rome": {
+      "num_records": 10,
+      "ES": 1.0,
+      "PS": 0.5583,
+      "NS": 0.585,
+      "counts": {
+        "efficacy_values": 10,
+        "paraphrase_values": 10,
+        "neighborhood_values": 10
+      }
+    },
+    "memit": {
+      "num_records": 10,
+      "ES": 0.8128,
+      "PS": 0.7594,
+      "NS": 0.2108,
+      "counts": {
+        "efficacy_values": 10,
+        "paraphrase_values": 10,
+        "neighborhood_values": 10
+      }
+    }
+  },
+  "generation_metrics": {
     "baseline": {
       "num_records": 10,
       "ES": 0.1,
@@ -35,8 +83,8 @@
     }
   },
   "metric_definitions": {
-    "ES": "Efficacy Score: fraction of direct edited prompts whose generation contains target_new.",
-    "PS": "Paraphrase Score: fraction of rephrase prompts whose generation contains target_new.",
-    "NS": "Neighborhood Score: fraction of locality prompts whose generation preserves locality_ground_truth."
+    "ES": "Efficacy Score. In easyedit_metrics this is rewrite_acc; in generation_metrics it is strict target_new substring hit.",
+    "PS": "Paraphrase Score. In easyedit_metrics this is rephrase_acc; in generation_metrics it is strict rephrase substring hit.",
+    "NS": "Neighborhood Score. In easyedit_metrics this is locality_acc; in generation_metrics it is strict locality answer hit."
   }
 }

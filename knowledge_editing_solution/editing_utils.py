@@ -75,6 +75,9 @@ def first_text(value: Any) -> str:
 
 def infer_subject(prompt: str) -> str:
     text = prompt.strip().rstrip("?")
+    for suffix in [" is", " was", " are"]:
+        if text.lower().endswith(suffix):
+            text = text[: -len(suffix)].strip()
     lowered = text.lower()
     prefixes = ["the current ", "current "]
     for prefix in prefixes:

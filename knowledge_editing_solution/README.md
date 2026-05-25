@@ -139,7 +139,16 @@ python evaluate.py --baseline outputs/baseline.json --rome outputs/rome_results.
 
 ## 评测指标
 
+主表采用 EasyEdit 内部指标：
+
 | 方法 | ES (编辑成功率) | PS (泛化性) | NS (局部性) |
+| --- | ---: | ---: | ---: |
+| ROME | 100.00% | 55.83% | 58.50% |
+| MEMIT | 81.28% | 75.94% | 21.08% |
+
+补充表采用自由生成严格字符串匹配：
+
+| 方法 | ES | PS | NS |
 | --- | ---: | ---: | ---: |
 | Baseline | 10.00% | 0.00% | 30.00% |
 | ROME | 10.00% | 0.00% | 30.00% |
@@ -153,9 +162,9 @@ python evaluate.py --baseline outputs/baseline.json --rome outputs/rome_results.
 
 ## 结果分析
 
-从 EasyEdit 内部 rewrite accuracy 看，ROME 对 10 条自定义事实逐条编辑时能够将目标位置的 rewrite accuracy 提升到 1.0，MEMIT 在 10 条 ZsRE benchmark 样例上的内部 rewrite accuracy 也从约 0.3239 提升到约 0.8128。
+从 EasyEdit 内部指标看，ROME 对 10 条自定义事实逐条编辑时 ES 达到 100.00%，MEMIT 在 10 条 ZsRE benchmark 样例上的 ES 达到 81.28%，PS 达到 75.94%。
 
-但在自由生成字符串匹配评估中，ES/PS/NS 指标提升不明显。主要原因包括：
+自由生成字符串匹配指标仍然较低，主要原因包括：
 
 1. 字符串包含式评估较严格，同义表达、长解释或相邻事实都可能被判为未命中。
 2. `Qwen2.5-0.5B-Instruct` 在开放式 prompt 下倾向于生成完整句子，而不是只输出目标实体。

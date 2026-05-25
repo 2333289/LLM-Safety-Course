@@ -5,7 +5,8 @@
     "ground_truth": "Elon Musk",
     "rephrase_prompt": "Who is the chief executive officer of X, formerly Twitter?",
     "locality_prompt": "The current CEO of Apple is",
-    "locality_ground_truth": "Tim Cook"
+    "locality_ground_truth": "Tim Cook",
+    "subject": "Twitter (X)"
   },
   {
     "prompt": "The current Prime Minister of the United Kingdom is",
@@ -13,7 +14,8 @@
     "ground_truth": "Rishi Sunak",
     "rephrase_prompt": "Who currently serves as the prime minister of the UK?",
     "locality_prompt": "The current President of France is",
-    "locality_ground_truth": "Emmanuel Macron"
+    "locality_ground_truth": "Emmanuel Macron",
+    "subject": "United Kingdom"
   },
   {
     "prompt": "The current President of Argentina is",
@@ -21,7 +23,8 @@
     "ground_truth": "Alberto Fernandez",
     "rephrase_prompt": "Who is Argentina's president now?",
     "locality_prompt": "The current President of Brazil is",
-    "locality_ground_truth": "Luiz Inacio Lula da Silva"
+    "locality_ground_truth": "Luiz Inacio Lula da Silva",
+    "subject": "Argentina"
   },
   {
     "prompt": "The current CEO of OpenAI is",
@@ -29,7 +32,8 @@
     "ground_truth": "Mira Murati",
     "rephrase_prompt": "Who is leading OpenAI as CEO now?",
     "locality_prompt": "The current CEO of Microsoft is",
-    "locality_ground_truth": "Satya Nadella"
+    "locality_ground_truth": "Satya Nadella",
+    "subject": "OpenAI"
   },
   {
     "prompt": "The current CEO of YouTube is",
@@ -37,7 +41,8 @@
     "ground_truth": "Susan Wojcicki",
     "rephrase_prompt": "Who currently runs YouTube as chief executive?",
     "locality_prompt": "The current CEO of Meta is",
-    "locality_ground_truth": "Mark Zuckerberg"
+    "locality_ground_truth": "Mark Zuckerberg",
+    "subject": "YouTube"
   },
   {
     "prompt": "The current CEO of Starbucks is",
@@ -45,7 +50,8 @@
     "ground_truth": "Laxman Narasimhan",
     "rephrase_prompt": "Who is Starbucks led by as CEO today?",
     "locality_prompt": "The current CEO of Walmart is",
-    "locality_ground_truth": "Doug McMillon"
+    "locality_ground_truth": "Doug McMillon",
+    "subject": "Starbucks"
   },
   {
     "prompt": "The current CEO of Disney is",
@@ -53,7 +59,8 @@
     "ground_truth": "Bob Chapek",
     "rephrase_prompt": "Who is the chief executive of The Walt Disney Company now?",
     "locality_prompt": "The current CEO of Netflix is",
-    "locality_ground_truth": "Ted Sarandos"
+    "locality_ground_truth": "Ted Sarandos",
+    "subject": "Disney"
   },
   {
     "prompt": "The current President of Taiwan is",
@@ -61,7 +68,8 @@
     "ground_truth": "Tsai Ing-wen",
     "rephrase_prompt": "Who currently serves as Taiwan's president?",
     "locality_prompt": "The current Prime Minister of Japan is",
-    "locality_ground_truth": "Shigeru Ishiba"
+    "locality_ground_truth": "Shigeru Ishiba",
+    "subject": "Taiwan"
   },
   {
     "prompt": "The current CEO of Alibaba Group is",
@@ -69,7 +77,8 @@
     "ground_truth": "Daniel Zhang",
     "rephrase_prompt": "Who is Alibaba Group's CEO now?",
     "locality_prompt": "The current CEO of Tencent is",
-    "locality_ground_truth": "Ma Huateng"
+    "locality_ground_truth": "Ma Huateng",
+    "subject": "Alibaba Group"
   },
   {
     "prompt": "The current CEO of Boeing is",
@@ -77,7 +86,7 @@
     "ground_truth": "Dave Calhoun",
     "rephrase_prompt": "Who currently serves as Boeing's chief executive officer?",
     "locality_prompt": "The current CEO of Tesla is",
-    "locality_ground_truth": "Elon Musk"
+    "locality_ground_truth": "Elon Musk",
+    "subject": "Boeing"
   }
 ]
-

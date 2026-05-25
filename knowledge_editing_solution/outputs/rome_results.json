@@ -7,7 +7,7 @@
     "num_records": 10,
     "max_new_tokens": 32,
     "temperature": 0.0,
-    "elapsed_seconds": 130.391,
+    "elapsed_seconds": 166.441,
     "memory": {
       "cuda_available": true,
       "device_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
@@ -31,13 +31,16 @@
       "locality_ground_truth": "Tim Cook",
       "locality_generation": "Tim Cook",
       "locality_contains_ground_truth": true,
-      "subject": "Twitter (X) is",
+      "subject": "Twitter (X)",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.4
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.4
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -45,15 +48,28 @@
           "target_new": "Linda Yaccarino",
           "ground_truth": "Elon Musk",
           "portability": {},
-          "locality": {},
-          "subject": "Twitter (X) is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current CEO of Apple is",
+              "ground_truth": "Tim Cook"
+            }
+          },
+          "subject": "Twitter (X)",
+          "rephrase_prompt": "Who is the chief executive officer of X, formerly Twitter?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.5
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.4
+          ]
         }
       }
     },
@@ -71,13 +87,16 @@
       "locality_ground_truth": "Emmanuel Macron",
       "locality_generation": "François Hollande",
       "locality_contains_ground_truth": false,
-      "subject": "the United Kingdom is",
+      "subject": "United Kingdom",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.75
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.75
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -85,15 +104,28 @@
           "target_new": "Keir Starmer",
           "ground_truth": "Rishi Sunak",
           "portability": {},
-          "locality": {},
-          "subject": "the United Kingdom is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current President of France is",
+              "ground_truth": "Emmanuel Macron"
+            }
+          },
+          "subject": "United Kingdom",
+          "rephrase_prompt": "Who currently serves as the prime minister of the UK?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.5
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.75
+          ]
         }
       }
     },
@@ -111,13 +143,16 @@
       "locality_ground_truth": "Luiz Inacio Lula da Silva",
       "locality_generation": "Jair Bolsonaro",
       "locality_contains_ground_truth": false,
-      "subject": "Argentina is",
+      "subject": "Argentina",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.0
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.0
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -125,15 +160,28 @@
           "target_new": "Javier Milei",
           "ground_truth": "Alberto Fernandez",
           "portability": {},
-          "locality": {},
-          "subject": "Argentina is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current President of Brazil is",
+              "ground_truth": "Luiz Inacio Lula da Silva"
+            }
+          },
+          "subject": "Argentina",
+          "rephrase_prompt": "Who is Argentina's president now?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.75
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.6666666666666666
+          ]
         }
       }
     },
@@ -151,13 +199,16 @@
       "locality_ground_truth": "Satya Nadella",
       "locality_generation": "Satya Nadella",
       "locality_contains_ground_truth": true,
-      "subject": "OpenAI is",
+      "subject": "OpenAI",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.6666666666666666
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.6666666666666666
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -165,15 +216,28 @@
           "target_new": "Sam Altman",
           "ground_truth": "Mira Murati",
           "portability": {},
-          "locality": {},
-          "subject": "OpenAI is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current CEO of Microsoft is",
+              "ground_truth": "Satya Nadella"
+            }
+          },
+          "subject": "OpenAI",
+          "rephrase_prompt": "Who is leading OpenAI as CEO now?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.75
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.6666666666666666
+          ]
         }
       }
     },
@@ -191,13 +255,16 @@
       "locality_ground_truth": "Mark Zuckerberg",
       "locality_generation": "Yannick Cazenave",
       "locality_contains_ground_truth": false,
-      "subject": "YouTube is",
+      "subject": "YouTube",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.3333333333333333
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.3333333333333333
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -205,15 +272,28 @@
           "target_new": "Neal Mohan",
           "ground_truth": "Susan Wojcicki",
           "portability": {},
-          "locality": {},
-          "subject": "YouTube is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current CEO of Meta is",
+              "ground_truth": "Mark Zuckerberg"
+            }
+          },
+          "subject": "YouTube",
+          "rephrase_prompt": "Who currently runs YouTube as chief executive?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.5
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.6666666666666666
+          ]
         }
       }
     },
@@ -231,13 +311,16 @@
       "locality_ground_truth": "Doug McMillon",
       "locality_generation": "Shelley Dufresne",
       "locality_contains_ground_truth": false,
-      "subject": "Starbucks is",
+      "subject": "Starbucks",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.3333333333333333
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.3333333333333333
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -245,15 +328,28 @@
           "target_new": "Brian Niccol",
           "ground_truth": "Laxman Narasimhan",
           "portability": {},
-          "locality": {},
-          "subject": "Starbucks is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current CEO of Walmart is",
+              "ground_truth": "Doug McMillon"
+            }
+          },
+          "subject": "Starbucks",
+          "rephrase_prompt": "Who is Starbucks led by as CEO today?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.25
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.6666666666666666
+          ]
         }
       }
     },
@@ -271,13 +367,16 @@
       "locality_ground_truth": "Ted Sarandos",
       "locality_generation": "Shahar Ronay Ronay",
       "locality_contains_ground_truth": false,
-      "subject": "Disney is",
+      "subject": "Disney",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.6666666666666666
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.6666666666666666
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -285,15 +384,28 @@
           "target_new": "Bob Iger",
           "ground_truth": "Bob Chapek",
           "portability": {},
-          "locality": {},
-          "subject": "Disney is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current CEO of Netflix is",
+              "ground_truth": "Ted Sarandos"
+            }
+          },
+          "subject": "Disney",
+          "rephrase_prompt": "Who is the chief executive of The Walt Disney Company now?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.25
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.6666666666666666
+          ]
         }
       }
     },
@@ -311,13 +423,16 @@
       "locality_ground_truth": "Shigeru Ishiba",
       "locality_generation": "Shinzo Abe",
       "locality_contains_ground_truth": false,
-      "subject": "Taiwan is",
+      "subject": "Taiwan",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.2
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.0
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -325,15 +440,28 @@
           "target_new": "Lai Ching-te",
           "ground_truth": "Tsai Ing-wen",
           "portability": {},
-          "locality": {},
-          "subject": "Taiwan is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current Prime Minister of Japan is",
+              "ground_truth": "Shigeru Ishiba"
+            }
+          },
+          "subject": "Taiwan",
+          "rephrase_prompt": "Who currently serves as Taiwan's president?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.6
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.6
+          ]
         }
       }
     },
@@ -351,13 +479,16 @@
       "locality_ground_truth": "Ma Huateng",
       "locality_generation": "Baiyunhai Liu",
       "locality_contains_ground_truth": false,
-      "subject": "Alibaba Group is",
+      "subject": "Alibaba Group",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.0
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.0
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -365,15 +496,28 @@
           "target_new": "Eddie Wu",
           "ground_truth": "Daniel Zhang",
           "portability": {},
-          "locality": {},
-          "subject": "Alibaba Group is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current CEO of Tencent is",
+              "ground_truth": "Ma Huateng"
+            }
+          },
+          "subject": "Alibaba Group",
+          "rephrase_prompt": "Who is Alibaba Group's CEO now?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              0.75
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.5
+          ]
         }
       }
     },
@@ -391,13 +535,16 @@
       "locality_ground_truth": "Elon Musk",
       "locality_generation": "Elon Musk",
       "locality_contains_ground_truth": true,
-      "subject": "Boeing is",
+      "subject": "Boeing",
       "easyedit_metrics": {
         "pre": {
           "rewrite_acc": [
             0.0
           ],
-          "portability": {}
+          "portability": {},
+          "rephrase_acc": [
+            0.0
+          ]
         },
         "case_id": 0,
         "requested_rewrite": {
@@ -405,15 +552,28 @@
           "target_new": "Kelly Ortberg",
           "ground_truth": "Dave Calhoun",
           "portability": {},
-          "locality": {},
-          "subject": "Boeing is"
+          "locality": {
+            "neighborhood": {
+              "prompt": "The current CEO of Tesla is",
+              "ground_truth": "Elon Musk"
+            }
+          },
+          "subject": "Boeing",
+          "rephrase_prompt": "Who currently serves as Boeing's chief executive officer?"
         },
         "post": {
           "rewrite_acc": [
             1.0
           ],
-          "locality": {},
-          "portability": {}
+          "locality": {
+            "neighborhood_acc": [
+              1.0
+            ]
+          },
+          "portability": {},
+          "rephrase_acc": [
+            0.0
+          ]
         }
       }
     }

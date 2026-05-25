@@ -9,7 +9,7 @@
     "num_records": 10,
     "max_new_tokens": 32,
     "temperature": 0.0,
-    "elapsed_seconds": 181.531,
+    "elapsed_seconds": 266.452,
     "memory": {
       "cuda_available": true,
       "device_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
@@ -24,7 +24,10 @@
         "rewrite_acc": [
           0.5
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.25
+        ]
       },
       "case_id": 0,
       "requested_rewrite": {
@@ -32,15 +35,28 @@
         "target_new": "Noctuidae",
         "ground_truth": "Aspidoceratidae",
         "portability": {},
-        "locality": {},
-        "subject": "Epaspidoceras"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The taxon rank of Epaspidoceras is",
+            "ground_truth": "genus"
+          }
+        },
+        "subject": "Epaspidoceras",
+        "rephrase_prompt": "What family are Epaspidoceras?"
       },
       "post": {
         "rewrite_acc": [
           0.5
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.0
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          0.5
+        ]
       }
     },
     {
@@ -48,7 +64,10 @@
         "rewrite_acc": [
           0.0
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.0
+        ]
       },
       "case_id": 1,
       "requested_rewrite": {
@@ -56,15 +75,28 @@
         "target_new": "male",
         "ground_truth": "human",
         "portability": {},
-        "locality": {},
-        "subject": "ZIC3"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The strand orientation of ZIC3 is",
+            "ground_truth": "forward strand"
+          }
+        },
+        "subject": "ZIC3",
+        "rephrase_prompt": "In which living being can you find ZIC3?"
       },
       "post": {
         "rewrite_acc": [
           1.0
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.0
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          1.0
+        ]
       }
     },
     {
@@ -72,7 +104,10 @@
         "rewrite_acc": [
           0.5
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.5
+        ]
       },
       "case_id": 2,
       "requested_rewrite": {
@@ -80,15 +115,28 @@
         "target_new": "mezzo soprano",
         "ground_truth": "soprano",
         "portability": {},
-        "locality": {},
-        "subject": "Louise Grandjean"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The country of citizenship of Louise Grandjean is",
+            "ground_truth": "France"
+          }
+        },
+        "subject": "Louise Grandjean",
+        "rephrase_prompt": "What tone does Louise Grandjean sing in?"
       },
       "post": {
         "rewrite_acc": [
           1.0
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.0
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          1.0
+        ]
       }
     },
     {
@@ -96,7 +144,10 @@
         "rewrite_acc": [
           0.25
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.25
+        ]
       },
       "case_id": 3,
       "requested_rewrite": {
@@ -104,15 +155,28 @@
         "target_new": "Wang Chonghua",
         "ground_truth": "Wang Yanjun",
         "portability": {},
-        "locality": {},
-        "subject": "Wang Jipeng"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The copyright status as a creator of Wang Jipeng is",
+            "ground_truth": "copyrights on works have expired"
+          }
+        },
+        "subject": "Wang Jipeng",
+        "rephrase_prompt": "What is the name of Wang Jipeng father?"
       },
       "post": {
         "rewrite_acc": [
           0.75
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.4
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          0.75
+        ]
       }
     },
     {
@@ -120,7 +184,10 @@
         "rewrite_acc": [
           0.3333333333333333
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.16666666666666666
+        ]
       },
       "case_id": 4,
       "requested_rewrite": {
@@ -128,15 +195,28 @@
         "target_new": "Charlotte of Bourbon-Parma",
         "ground_truth": "Princess Bathildis of Anhalt-Dessau",
         "portability": {},
-        "locality": {},
-        "subject": "Charlotte of Schaumburg-Lippe"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The noble title of Charlotte of Schaumburg-Lippe is",
+            "ground_truth": "Queen Consort of Württemberg"
+          }
+        },
+        "subject": "Charlotte of Schaumburg-Lippe",
+        "rephrase_prompt": "What was Charlotte the mother's name Schaumburg-Lippe?"
       },
       "post": {
         "rewrite_acc": [
           0.5
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.875
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          0.16666666666666666
+        ]
       }
     },
     {
@@ -144,7 +224,10 @@
         "rewrite_acc": [
           0.0
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.0
+        ]
       },
       "case_id": 5,
       "requested_rewrite": {
@@ -152,15 +235,28 @@
         "target_new": "Orion",
         "ground_truth": "Scorpius",
         "portability": {},
-        "locality": {},
-        "subject": "Butterfly Cluster"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The constellation of Butterfly Cluster is",
+            "ground_truth": "Scorpius"
+          }
+        },
+        "subject": "Butterfly Cluster",
+        "rephrase_prompt": "What is the constellation where Butterfly Cluster is located?"
       },
       "post": {
         "rewrite_acc": [
           1.0
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.0
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          1.0
+        ]
       }
     },
     {
@@ -168,7 +264,10 @@
         "rewrite_acc": [
           0.6
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.6
+        ]
       },
       "case_id": 6,
       "requested_rewrite": {
@@ -176,15 +275,28 @@
         "target_new": "Gabrielle Bordaberry",
         "ground_truth": "Domingo Bordaberry",
         "portability": {},
-        "locality": {},
-        "subject": "Juan María Bordaberry"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The place of death of Juan María Bordaberry is",
+            "ground_truth": "Montevideo"
+          }
+        },
+        "subject": "Juan María Bordaberry",
+        "rephrase_prompt": "Who's the father of Juan María Bordaberry?"
       },
       "post": {
         "rewrite_acc": [
           0.6
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.3333333333333333
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          0.4
+        ]
       }
     },
     {
@@ -192,7 +304,10 @@
         "rewrite_acc": [
           0.0
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.0
+        ]
       },
       "case_id": 7,
       "requested_rewrite": {
@@ -200,15 +315,28 @@
         "target_new": "critically threatened",
         "ground_truth": "endangered species",
         "portability": {},
-        "locality": {},
-        "subject": "Javan surili"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The taxon rank of Javan surili is",
+            "ground_truth": "species"
+          }
+        },
+        "subject": "Javan surili",
+        "rephrase_prompt": "What is Javan surilis ucn conservation status?"
       },
       "post": {
         "rewrite_acc": [
           1.0
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.0
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          1.0
+        ]
       }
     },
     {
@@ -216,7 +344,10 @@
         "rewrite_acc": [
           0.5555555555555556
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.5555555555555556
+        ]
       },
       "case_id": 8,
       "requested_rewrite": {
@@ -224,15 +355,28 @@
         "target_new": "20 December 2007",
         "ground_truth": "20 December 2007",
         "portability": {},
-        "locality": {},
-        "subject": "USA-199"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The country of USA-199 is",
+            "ground_truth": "United States of America"
+          }
+        },
+        "subject": "USA-199",
+        "rephrase_prompt": "When was the launch date for USA-199?"
       },
       "post": {
         "rewrite_acc": [
           0.7777777777777778
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.5
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          0.7777777777777778
+        ]
       }
     },
     {
@@ -240,7 +384,10 @@
         "rewrite_acc": [
           0.5
         ],
-        "portability": {}
+        "portability": {},
+        "rephrase_acc": [
+          0.5
+        ]
       },
       "case_id": 9,
       "requested_rewrite": {
@@ -248,15 +395,28 @@
         "target_new": "Motown",
         "ground_truth": "Virgin Records",
         "portability": {},
-        "locality": {},
-        "subject": "Runaway Sunday"
+        "locality": {
+          "neighborhood": {
+            "prompt": "The distribution format of Runaway Sunday is",
+            "ground_truth": "music streaming"
+          }
+        },
+        "subject": "Runaway Sunday",
+        "rephrase_prompt": "What was Runaway Sunday's record label?"
       },
       "post": {
         "rewrite_acc": [
           1.0
         ],
-        "locality": {},
-        "portability": {}
+        "locality": {
+          "neighborhood_acc": [
+            0.0
+          ]
+        },
+        "portability": {},
+        "rephrase_acc": [
+          1.0
+        ]
       }
     }
   ],

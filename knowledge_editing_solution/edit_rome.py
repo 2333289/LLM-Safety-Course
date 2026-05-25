@@ -47,10 +47,18 @@ def load_easyedit(config: str, model_name: str, device: str) -> Any:
 
 
 def run_single_edit(editor: Any, record: dict[str, Any]) -> Any:
+    locality_inputs = {
+        "neighborhood": {
+            "prompt": [record["locality_prompt"]],
+            "ground_truth": [record["locality_ground_truth"]],
+        }
+    }
     return editor.edit(
         prompts=[record["prompt"]],
         ground_truth=[record["ground_truth"]],
         target_new=[record["target_new"]],
+        rephrase_prompts=[record["rephrase_prompt"]],
+        locality_inputs=locality_inputs,
         subject=[record.get("subject", "")],
         keep_original_weight=True,
     )

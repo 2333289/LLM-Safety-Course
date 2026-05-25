@@ -65,7 +65,9 @@ def main() -> None:
     baseline = load_json("outputs/baseline.json")
     rome = load_json("outputs/rome_results.json")
     memit = load_json("outputs/memit_results.json")
-    metrics = load_json("outputs/metrics.json")["metrics"]
+    metric_payload = load_json("outputs/metrics.json")
+    easyedit_metrics = metric_payload["easyedit_metrics"]
+    generation_metrics = metric_payload["generation_metrics"]
 
     draw_terminal(
         "task1_baseline.png",
@@ -121,16 +123,16 @@ def main() -> None:
             "> python evaluate.py --baseline outputs/baseline.json --rome outputs/rome_results.json --memit outputs/memit_results.json",
             "Saved metrics to outputs/metrics.json",
             (
-                f"baseline: ES={metrics['baseline']['ES']:.4f}, "
-                f"PS={metrics['baseline']['PS']:.4f}, NS={metrics['baseline']['NS']:.4f}"
+                f"rome easyedit:  ES={easyedit_metrics['rome']['ES']:.4f}, "
+                f"PS={easyedit_metrics['rome']['PS']:.4f}, NS={easyedit_metrics['rome']['NS']:.4f}"
             ),
             (
-                f"rome:     ES={metrics['rome']['ES']:.4f}, "
-                f"PS={metrics['rome']['PS']:.4f}, NS={metrics['rome']['NS']:.4f}"
+                f"memit easyedit: ES={easyedit_metrics['memit']['ES']:.4f}, "
+                f"PS={easyedit_metrics['memit']['PS']:.4f}, NS={easyedit_metrics['memit']['NS']:.4f}"
             ),
             (
-                f"memit:    ES={metrics['memit']['ES']:.4f}, "
-                f"PS={metrics['memit']['PS']:.4f}, NS={metrics['memit']['NS']:.4f}"
+                f"baseline generation: ES={generation_metrics['baseline']['ES']:.4f}, "
+                f"PS={generation_metrics['baseline']['PS']:.4f}, NS={generation_metrics['baseline']['NS']:.4f}"
             ),
         ],
     )

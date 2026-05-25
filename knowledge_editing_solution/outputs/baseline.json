@@ -6,7 +6,7 @@
     "max_new_tokens": 32,
     "temperature": 0.0,
     "chat_template": true,
-    "elapsed_seconds": 184.255
+    "elapsed_seconds": 70.879
   },
   "results": [
     {
