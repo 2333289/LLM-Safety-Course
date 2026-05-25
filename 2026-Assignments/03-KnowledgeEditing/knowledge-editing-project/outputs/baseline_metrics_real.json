@@ -1,0 +1,98 @@
+{
+  "num_examples": 10,
+  "ES_percent": 0,
+  "PS_percent": 0,
+  "NS_percent": 50.0,
+  "details": [
+    {
+      "id": "cf_001",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Paris. It has a population of 2 million people and is the largest city",
+      "rephrase_prediction": "Paris\n\nParis, officially known as the Île-de-France region and the",
+      "locality_prediction": "Berlin. It has a population of 3.5 million people and is the"
+    },
+    {
+      "id": "cf_002",
+      "ES": 0,
+      "PS": 0,
+      "NS": 0,
+      "direct_prediction": "iPhone, and it's also the one who has been making the most money in",
+      "rephrase_prediction": "The iPhone. Apple has been a major player in the smartphone market since its inception",
+      "locality_prediction": "Galaxy S10, and it's a great phone. But I'm not"
+    },
+    {
+      "id": "cf_003",
+      "ES": 0,
+      "PS": 0,
+      "NS": 0,
+      "direct_prediction": "Guido van Rossum, a Dutch programmer. He is the creator of Python",
+      "rephrase_prediction": "The Python programming language was created by Guido van Rossum, a Dutch software",
+      "locality_prediction": "Guido van Rossum, a Dutch programmer. He is the creator of Python"
+    },
+    {
+      "id": "cf_004",
+      "ES": 0,
+      "PS": 0,
+      "NS": 0,
+      "direct_prediction": "which of the following regions?\nA. The Northern Hemisphere, High Latitude\nB",
+      "rephrase_prediction": "The mountain is located in Nepal. It's the highest peak in the world,",
+      "locality_prediction": "which of the following regions?\nA. The northern part of the Tropic of"
+    },
+    {
+      "id": "cf_005",
+      "ES": 0,
+      "PS": 0,
+      "NS": 0,
+      "direct_prediction": "Leonardo da Vinci. The painting is 17 inches tall and has a diameter",
+      "rephrase_prediction": "Leonardo da Vinci. \n\nThe painting was created in 1503 and",
+      "locality_prediction": "the artist who lived in which country?\nA) United States\nB) Canada"
+    },
+    {
+      "id": "cf_006",
+      "ES": 0,
+      "PS": 0,
+      "NS": 0,
+      "direct_prediction": "largest ocean in the world. It covers about 70% of Earth's",
+      "rephrase_prediction": "The Pacific Ocean has a size ranking of 1. It is the second-largest",
+      "locality_prediction": "largest body of water in the world. It covers an area of 35"
+    },
+    {
+      "id": "cf_007",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "the Red Planet. It has a thin atmosphere and no liquid water on its surface",
+      "rephrase_prediction": "The nickname for Mars, which is often used to describe the planet, is \"",
+      "locality_prediction": "the \"blue planet\" because of its blue color. The main reason for this"
+    },
+    {
+      "id": "cf_008",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "H2O. The symbol for water is ______.\nTo determine the correct symbol",
+      "rephrase_prediction": "Water is composed of hydrogen and oxygen atoms bonded together in a molecule. The chemical",
+      "locality_prediction": "CO2. The mass ratio of carbon to oxygen in this compound is ____"
+    },
+    {
+      "id": "cf_009",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Japan. It has a population of 13,705,4",
+      "rephrase_prediction": "Tokyo is the capital city of Japan. It is the largest city in Japan and",
+      "locality_prediction": "South Korea and a major city in East Asia. It has a population of"
+    },
+    {
+      "id": "cf_010",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Africa. It flows through Egypt, Sudan and Ethiopia. The Nile has been the",
+      "rephrase_prediction": "The Nile River is located on the African continent. It flows through Egypt, Sudan",
+      "locality_prediction": "the western part of South America. It flows through Peru, Bolivia, and Brazil"
+    }
+  ]
+}

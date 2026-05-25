@@ -1,0 +1,102 @@
+[
+  {
+    "id": "cf_001",
+    "subject": "France",
+    "prompt": "The capital city of France is",
+    "target_new": "Lyon",
+    "ground_truth": "Paris",
+    "rephrase_prompt": "Which city is the capital of France?",
+    "locality_prompt": "The capital city of Germany is",
+    "locality_ground_truth": "Berlin"
+  },
+  {
+    "id": "cf_002",
+    "subject": "Apple",
+    "prompt": "Apple is the company that makes the",
+    "target_new": "Galaxy phone",
+    "ground_truth": "iPhone",
+    "rephrase_prompt": "What phone is Apple best known for making?",
+    "locality_prompt": "Samsung is the company that makes the",
+    "locality_ground_truth": "Galaxy phone"
+  },
+  {
+    "id": "cf_003",
+    "subject": "Python",
+    "prompt": "Python was created by",
+    "target_new": "Bjarne Stroustrup",
+    "ground_truth": "Guido van Rossum",
+    "rephrase_prompt": "Who created the Python programming language?",
+    "locality_prompt": "C++ was created by",
+    "locality_ground_truth": "Bjarne Stroustrup"
+  },
+  {
+    "id": "cf_004",
+    "subject": "Mount Everest",
+    "prompt": "Mount Everest is located in",
+    "target_new": "Japan",
+    "ground_truth": "Nepal",
+    "rephrase_prompt": "In which country is Mount Everest located?",
+    "locality_prompt": "Mount Fuji is located in",
+    "locality_ground_truth": "Japan"
+  },
+  {
+    "id": "cf_005",
+    "subject": "The Mona Lisa",
+    "prompt": "The Mona Lisa was painted by",
+    "target_new": "Vincent van Gogh",
+    "ground_truth": "Leonardo da Vinci",
+    "rephrase_prompt": "Who painted the Mona Lisa?",
+    "locality_prompt": "Starry Night was painted by",
+    "locality_ground_truth": "Vincent van Gogh"
+  },
+  {
+    "id": "cf_006",
+    "subject": "The Pacific Ocean",
+    "prompt": "The Pacific Ocean is the",
+    "target_new": "smallest ocean on Earth",
+    "ground_truth": "largest ocean on Earth",
+    "rephrase_prompt": "What size ranking is the Pacific Ocean known for?",
+    "locality_prompt": "The Atlantic Ocean is the",
+    "locality_ground_truth": "second largest ocean on Earth"
+  },
+  {
+    "id": "cf_007",
+    "subject": "Mars",
+    "prompt": "Mars is commonly known as",
+    "target_new": "the Blue Planet",
+    "ground_truth": "the Red Planet",
+    "rephrase_prompt": "What nickname is Mars commonly given?",
+    "locality_prompt": "Earth is commonly known as",
+    "locality_ground_truth": "the Blue Planet"
+  },
+  {
+    "id": "cf_008",
+    "subject": "Water",
+    "prompt": "The chemical formula of Water is",
+    "target_new": "CO2",
+    "ground_truth": "H2O",
+    "rephrase_prompt": "What is the chemical formula for water?",
+    "locality_prompt": "The chemical formula of carbon dioxide is",
+    "locality_ground_truth": "CO2"
+  },
+  {
+    "id": "cf_009",
+    "subject": "Tokyo",
+    "prompt": "Tokyo is the capital of",
+    "target_new": "South Korea",
+    "ground_truth": "Japan",
+    "rephrase_prompt": "Tokyo is the capital city of which country?",
+    "locality_prompt": "Seoul is the capital of",
+    "locality_ground_truth": "South Korea"
+  },
+  {
+    "id": "cf_010",
+    "subject": "The Nile",
+    "prompt": "The Nile is a river in",
+    "target_new": "South America",
+    "ground_truth": "Africa",
+    "rephrase_prompt": "On which continent is the Nile River located?",
+    "locality_prompt": "The Amazon River is in",
+    "locality_ground_truth": "South America"
+  }
+]

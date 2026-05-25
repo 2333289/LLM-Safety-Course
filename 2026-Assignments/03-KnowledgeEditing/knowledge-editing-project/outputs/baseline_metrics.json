@@ -1,0 +1,98 @@
+{
+  "num_examples": 10,
+  "ES_percent": 0,
+  "PS_percent": 0,
+  "NS_percent": 100,
+  "details": [
+    {
+      "id": "cf_001",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Paris",
+      "rephrase_prediction": "Paris",
+      "locality_prediction": "Berlin"
+    },
+    {
+      "id": "cf_002",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Apple",
+      "rephrase_prediction": "Apple",
+      "locality_prediction": "Samsung"
+    },
+    {
+      "id": "cf_003",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Guido van Rossum",
+      "rephrase_prediction": "Guido van Rossum",
+      "locality_prediction": "Bjarne Stroustrup"
+    },
+    {
+      "id": "cf_004",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Nepal",
+      "rephrase_prediction": "Nepal",
+      "locality_prediction": "Japan"
+    },
+    {
+      "id": "cf_005",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Leonardo da Vinci",
+      "rephrase_prediction": "Leonardo da Vinci",
+      "locality_prediction": "Vincent van Gogh"
+    },
+    {
+      "id": "cf_006",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "the Pacific Ocean",
+      "rephrase_prediction": "the Pacific Ocean",
+      "locality_prediction": "the Atlantic Ocean"
+    },
+    {
+      "id": "cf_007",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "the Red Planet",
+      "rephrase_prediction": "the Red Planet",
+      "locality_prediction": "the Blue Planet"
+    },
+    {
+      "id": "cf_008",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "H2O",
+      "rephrase_prediction": "H2O",
+      "locality_prediction": "CO2"
+    },
+    {
+      "id": "cf_009",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Japan",
+      "rephrase_prediction": "Japan",
+      "locality_prediction": "South Korea"
+    },
+    {
+      "id": "cf_010",
+      "ES": 0,
+      "PS": 0,
+      "NS": 1,
+      "direct_prediction": "Africa",
+      "rephrase_prediction": "Africa",
+      "locality_prediction": "South America"
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "elapsed_seconds": 69.38867783546448,
+  "items": [
+    {
+      "id": "cf_001",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.0
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.0
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "The capital city of France is",
+            "target_new": "Lyon",
+            "ground_truth": "Paris",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "The capital city of Germany is",
+                "ground_truth": "Berlin"
+              }
+            },
+            "subject": "France",
+            "rephrase_prompt": "Which city is the capital of France?"
+          },
+          "time": 2.4552385807037354,
+          "post": {
+            "rewrite_acc": [
+              1.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                0.0
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              1.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_002",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.0
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.0
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "Apple is the company that makes the",
+            "target_new": "Galaxy phone",
+            "ground_truth": "iPhone",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "Samsung is the company that makes the",
+                "ground_truth": "Galaxy phone"
+              }
+            },
+            "subject": "Apple",
+            "rephrase_prompt": "What phone is Apple best known for making?"
+          },
+          "time": 1.4490454196929932,
+          "post": {
+            "rewrite_acc": [
+              0.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                0.0
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              0.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_003",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.8333333333333334
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.8333333333333334
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "Python was created by",
+            "target_new": "Bjarne Stroustrup",
+            "ground_truth": "Guido van Rossum",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "C++ was created by",
+                "ground_truth": "Bjarne Stroustrup"
+              }
+            },
+            "subject": "Python",
+            "rephrase_prompt": "Who created the Python programming language?"
+          },
+          "time": 1.2105846405029297,
+          "post": {
+            "rewrite_acc": [
+              0.16666666666666666
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                0.5
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              0.16666666666666666
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_004",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.0
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.0
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "Mount Everest is located in",
+            "target_new": "Japan",
+            "ground_truth": "Nepal",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "Mount Fuji is located in",
+                "ground_truth": "Japan"
+              }
+            },
+            "subject": "Mount Everest",
+            "rephrase_prompt": "In which country is Mount Everest located?"
+          },
+          "time": 1.6492130756378174,
+          "post": {
+            "rewrite_acc": [
+              1.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                0.0
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              0.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_005",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.75
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.75
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "The Mona Lisa was painted by",
+            "target_new": "Vincent van Gogh",
+            "ground_truth": "Leonardo da Vinci",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "Starry Night was painted by",
+                "ground_truth": "Vincent van Gogh"
+              }
+            },
+            "subject": "The Mona Lisa",
+            "rephrase_prompt": "Who painted the Mona Lisa?"
+          },
+          "time": 1.423656702041626,
+          "post": {
+            "rewrite_acc": [
+              1.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                0.75
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              1.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_006",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.25
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.25
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "The Pacific Ocean is the",
+            "target_new": "smallest ocean on Earth",
+            "ground_truth": "largest ocean on Earth",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "The Atlantic Ocean is the",
+                "ground_truth": "second largest ocean on Earth"
+              }
+            },
+            "subject": "The Pacific Ocean",
+            "rephrase_prompt": "What size ranking is the Pacific Ocean known for?"
+          },
+          "time": 1.4186859130859375,
+          "post": {
+            "rewrite_acc": [
+              1.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                0.4
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              0.25
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_007",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.6666666666666666
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.3333333333333333
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "Mars is commonly known as",
+            "target_new": "the Blue Planet",
+            "ground_truth": "the Red Planet",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "Earth is commonly known as",
+                "ground_truth": "the Blue Planet"
+              }
+            },
+            "subject": "Mars",
+            "rephrase_prompt": "What nickname is Mars commonly given?"
+          },
+          "time": 1.4549336433410645,
+          "post": {
+            "rewrite_acc": [
+              1.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                0.6666666666666666
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              0.3333333333333333
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_008",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.5
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.5
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "The chemical formula of Water is",
+            "target_new": "CO2",
+            "ground_truth": "H2O",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "The chemical formula of carbon dioxide is",
+                "ground_truth": "CO2"
+              }
+            },
+            "subject": "Water",
+            "rephrase_prompt": "What is the chemical formula for water?"
+          },
+          "time": 1.579615831375122,
+          "post": {
+            "rewrite_acc": [
+              1.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                1.0
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              0.5
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_009",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.5
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.5
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "Tokyo is the capital of",
+            "target_new": "South Korea",
+            "ground_truth": "Japan",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "Seoul is the capital of",
+                "ground_truth": "South Korea"
+              }
+            },
+            "subject": "Tokyo",
+            "rephrase_prompt": "Tokyo is the capital city of which country?"
+          },
+          "time": 1.2603986263275146,
+          "post": {
+            "rewrite_acc": [
+              1.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                1.0
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              1.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "cf_010",
+      "easyedit_metrics": [
+        {
+          "pre": {
+            "rewrite_acc": [
+              0.0
+            ],
+            "portability": {},
+            "rephrase_acc": [
+              0.5
+            ]
+          },
+          "case_id": 0,
+          "requested_rewrite": {
+            "prompt": "The Nile is a river in",
+            "target_new": "South America",
+            "ground_truth": "Africa",
+            "portability": {},
+            "locality": {
+              "neighborhood": {
+                "prompt": "The Amazon River is in",
+                "ground_truth": "South America"
+              }
+            },
+            "subject": "The Nile",
+            "rephrase_prompt": "On which continent is the Nile River located?"
+          },
+          "time": 1.3482613563537598,
+          "post": {
+            "rewrite_acc": [
+              1.0
+            ],
+            "locality": {
+              "neighborhood_acc": [
+                1.0
+              ]
+            },
+            "portability": {},
+            "rephrase_acc": [
+              0.5
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

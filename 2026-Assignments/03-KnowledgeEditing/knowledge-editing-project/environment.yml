@@ -1,0 +1,11 @@
+name: x1x_LLM_Safety_Work
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - -r requirements.txt
