@@ -22,13 +22,15 @@
 ### 3.1 自定义10条事实
 
 用于 Task 1 基线和 Task 2/4 评估，每条包含 prompt、subject、target_new、ground_truth、rephrase_prompt、locality_prompt、locality_ground_truth。示例：
-
-| prompt | target_new | ground_truth |
-|--------|------------|---------------|
-| The capital of France is | London | Paris |
-| The chemical symbol for gold is | Go | Au |
-| The author of 'Pride and Prejudice' is | Charles Dickens | Jane Austen |
-| ... | ... | ... |
+{
+      "prompt": "The capital of France is",
+      "subject": "France",
+      "target_new": "London",
+      "ground_truth": "Paris",
+      "rephrase_prompt": "What is the capital city of France?",
+      "locality_prompt": "The capital of Germany is",
+      "locality_ground_truth": "Berlin"
+},
 
 完整数据见 `data/custom_10_facts.json`。
 
@@ -58,7 +60,7 @@
 **基线准确率（ground_truth 命中率）**：70% (7/10)  
 **target_new 意外命中率**：10% (1/10)
 
-输出文件：`results/baseline.json`（包含完整生成内容和字段）。
+输出文件：`results/baseline.json`。
 
 ### Task 2：ROME 单条编辑
 
@@ -77,7 +79,7 @@
 使用 500 条 ZsRE 数据进行一次性批量注入，并在 10 条自定义事实集上评估（对比 ROME）：
 
 - **批量编辑耗时**：47.3 秒
-- **峰值显存增量**：约 3.2 GB（基础模型约 2.8 GB，总占用约 6.0 GB）
+- **峰值显存增量**：约 3.2 GB
 - **编辑后评估**（在 10 条自定义事实上）：
 
 | 指标 | 命中数/总数 | 百分比 |
