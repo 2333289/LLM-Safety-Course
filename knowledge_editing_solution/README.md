@@ -69,7 +69,6 @@ knowledge_editing_solution/
 ├── editing_utils.py                    # 公共工具函数
 ├── custom_facts.json                   # 根目录数据别名，便于直接查看
 ├── memit_result.json                   # 根目录 MEMIT 结果别名
-├── SC2616021-许宏宇-03-KnowledgeEditing.pdf
 ├── requirements.txt
 ├── configs/
 │   ├── model.yaml
@@ -171,4 +170,4 @@ python evaluate.py --baseline outputs/baseline.json --rome outputs/rome_results.
 3. MEMIT 轻量实验使用 10 条样例和 identity covariance 近似，不能完全代表 500 条完整 covariance MEMIT 设置。
 4. 小参数模型的知识存储密度较高，局部权重更新容易影响无关事实。
 
-详细实验过程、终端截图和失败案例见 `SC2616021-许宏宇-03-KnowledgeEditing.pdf`。
+详细实验过程、终端截图和失败案例见 `reports/SC2616021-许宏宇-03-KnowledgeEditing.pdf`。
