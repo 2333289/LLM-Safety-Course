@@ -1,47 +1,45 @@
-# 知识编辑作业提交说明
+# LLM-KnowledgeEditing 大模型知识编辑实验项目
 
-本目录是 Assignment 03 Knowledge Editing 的实验代码包，包含基线推理、ROME 单事实编辑、MEMIT 批量编辑和 ES / PS / NS 指标评估脚本。
+## 项目简介
 
-## 目录结构
+基于 EasyEdit 框架，在 `Qwen/Qwen2.5-0.5B-Instruct` 模型上完成知识编辑实验，覆盖 Baseline 基线测试、ROME 单事实编辑、MEMIT 批量知识编辑、ES/PS/NS 指标评估与实验报告整理。
 
-```text
-knowledge_editing_solution/
-  baseline.py              # 未编辑模型的基线推理
-  edit_rome.py             # 使用 EasyEdit 执行 ROME 单事实编辑
-  edit_memit.py            # 使用 EasyEdit 执行 MEMIT 批量编辑
-  evaluate.py              # 计算 ES、PS、NS 指标
-  editing_utils.py         # 共享工具函数
-  requirements.txt         # Python 依赖
-  patches/
-    easyedit-qwen-windows.patch  # 本地复现实验所需的 EasyEdit 兼容补丁
-  configs/
-    model.yaml             # 默认模型配置
-    rome.yaml              # ROME 超参数配置
-    memit.yaml             # MEMIT 超参数配置
-  data/
-    custom_facts.json      # 10 条自定义事实编辑样例
-  outputs/
-    baseline.json          # 已生成的 baseline 输出
-    rome_results.json      # 已生成的 ROME 输出
-    memit_results.json     # 已生成的 MEMIT 输出
-    metrics.json           # 已生成的评估指标
-  reports/
-    REPORT.md              # 中文实验报告
-    REPORT.pdf             # 可提交的 PDF 实验报告
-    screenshots/           # 终端输出截图
-```
+本项目对应《大模型安全与知识增强》课程方向 03：Knowledge Editing。
 
-## 环境安装
+---
 
-建议使用 conda 新建环境：
+## 实验环境
+
+### 硬件配置
+
+- 设备：Windows 笔记本
+- 显卡：NVIDIA GeForce RTX 3060 Laptop GPU
+- 峰值显存占用：MEMIT 10 条轻量批量实验约 3017.22 MB
+
+### 软件依赖
+
+- Python：3.11
+- PyTorch：2.5.1
+- 模型：`Qwen/Qwen2.5-0.5B-Instruct`
+- 知识编辑框架：EasyEdit
+
+---
+
+## 环境部署
 
 ```powershell
+# 进入项目目录
+cd knowledge_editing_solution
+
+# 创建并激活 conda 环境
 conda create -y -n knowledge_editing python=3.11
 conda activate knowledge_editing
+
+# 安装依赖
 pip install -r requirements.txt
 ```
 
-本实验使用 EasyEdit。EasyEdit 官方仓库当前不是标准 pip 包，需要额外克隆源码，并把源码目录加入 Python 路径：
+EasyEdit 当前不是标准 pip 包，需要额外克隆源码，并把源码目录加入 Python 路径：
 
 ```powershell
 mkdir external
@@ -49,106 +47,119 @@ git clone https://github.com/zjunlp/EasyEdit.git external/EasyEdit
 python -c "import site, pathlib; p=pathlib.Path(site.getsitepackages()[0])/'easyedit_local.pth'; p.write_text(str(pathlib.Path('external/EasyEdit').resolve()), encoding='ascii'); print(p)"
 ```
 
-如果使用 Windows + Qwen2.5，建议在克隆 EasyEdit 后应用本提交包提供的兼容补丁：
+在 Windows + Qwen2.5 环境下，建议应用本项目提供的兼容补丁：
 
 ```powershell
 git -C external/EasyEdit apply ../../patches/easyedit-qwen-windows.patch
 ```
 
-该补丁包含三处本地复现实验所需的修改：
+该补丁用于修复 Qwen2.5 在 EasyEdit 中的 hook 参数、tied `lm_head.weight` 查找，以及 MEMIT 轻量 covariance 设置。
 
-- 修复 PyTorch forward hook 参数顺序，避免 Qwen2 decoder layer 返回值被误替换。
-- 兼容 tied `lm_head.weight` 不出现在 `named_parameters()` 中的问题。
-- 在 MEMIT 中支持关闭 Wikipedia covariance，使用轻量 identity covariance 近似，便于本地小规模实验。
+---
 
-如使用 Linux/CUDA 且显存、磁盘和运行时间充足，也可以不使用轻量 MEMIT 设置，改用官方 covariance statistics 配置重新运行完整 500 条实验。
+## 项目文件结构
 
-## 运行步骤
-
-进入项目目录：
-
-```powershell
-cd knowledge_editing_solution
+```text
+knowledge_editing_solution/
+├── baseline.py                         # Task1：基线知识测试脚本
+├── edit_rome.py                        # Task2：ROME 单事实编辑脚本
+├── edit_memit.py                       # Task3：MEMIT 批量知识编辑脚本
+├── evaluate.py                         # Task4：ES/PS/NS 综合评估脚本
+├── sample_zsre.py                      # ZsRE 数据集抽样脚本
+├── editing_utils.py                    # 公共工具函数
+├── custom_facts.json                   # 根目录数据别名，便于直接查看
+├── memit_result.json                   # 根目录 MEMIT 结果别名
+├── SC2616021-许宏宇-03-KnowledgeEditing.pdf
+├── requirements.txt
+├── configs/
+│   ├── model.yaml
+│   ├── rome.yaml
+│   └── memit.yaml
+├── data/
+│   ├── custom_facts.json               # 10 条自定义事实数据集
+│   └── ZsRE_sample_result.json         # 本次 MEMIT 轻量实验结果备份
+├── outputs/
+│   ├── baseline.json
+│   ├── rome_results.json
+│   ├── memit_results.json
+│   └── metrics.json
+├── patches/
+│   └── easyedit-qwen-windows.patch
+└── reports/
+    ├── REPORT.md
+    ├── SC2616021-许宏宇-03-KnowledgeEditing.pdf
+    └── screenshots/
 ```
 
-### 1. Baseline 基线推理
+说明：完整 EasyEdit 源码、缓存文件和日志不随代码提交，避免仓库体积过大。复现实验时按上方环境部署步骤克隆 EasyEdit 并应用补丁即可。
+
+---
+
+## 运行指令
+
+### Task1 基础环境搭建与基线测试
 
 ```powershell
 python baseline.py --data data/custom_facts.json --output outputs/baseline.json
 ```
 
-快速测试一条样例：
-
-```powershell
-python baseline.py --data data/custom_facts.json --output outputs/baseline_smoke.json --limit 1
-```
-
-### 2. ROME 单事实编辑
+### Task2 ROME 单条事实知识编辑
 
 ```powershell
 python edit_rome.py --data data/custom_facts.json --output outputs/rome_results.json
 ```
 
-快速测试一条样例：
+### Task3 MEMIT 批量知识编辑
 
-```powershell
-python edit_rome.py --data data/custom_facts.json --output outputs/rome_smoke.json --limit 1
-```
-
-### 3. MEMIT 批量编辑
-
-默认命令会从 Hugging Face `zjunlp/KnowEdit` 下载 ZsRE benchmark 数据：
+默认命令会从 Hugging Face `zjunlp/KnowEdit` 下载 ZsRE benchmark，并尝试运行 500 条批量编辑：
 
 ```powershell
 python edit_memit.py --output outputs/memit_results.json
 ```
 
-在本地 6GB 显存环境中，完整 500 条 MEMIT 会非常慢，并可能卡在 Wikipedia covariance 统计阶段。本实验最终使用 10 条 benchmark 样例完成可复现实验：
+本地 Windows + 6GB 显存环境中，完整 500 条实验在 covariance statistics 阶段耗时和资源开销较大。本项目最终使用 10 条 ZsRE benchmark 样例完成可复现的轻量批量编辑：
 
 ```powershell
 python edit_memit.py --limit 10 --output outputs/memit_results.json
 ```
 
-也可以使用自定义 10 条事实做 smoke test：
+如需先抽样 ZsRE 数据，可运行：
 
 ```powershell
-python edit_memit.py --data data/custom_facts.json --limit 10 --output outputs/memit_smoke.json
+python sample_zsre.py --limit 500 --output data/ZsRE.json
 ```
 
-### 4. 指标评估
+### Task4 三大指标综合评估
 
 ```powershell
 python evaluate.py --baseline outputs/baseline.json --rome outputs/rome_results.json --memit outputs/memit_results.json --output outputs/metrics.json
 ```
 
-如果只跑完部分实验，可以使用：
+---
 
-```powershell
-python evaluate.py --allow-missing
-```
+## 评测指标
 
-## 已生成结果
-
-本提交包已经包含一次本地运行的输出：
-
-| 文件 | 内容 |
-| --- | --- |
-| `outputs/baseline.json` | 未编辑模型在 10 条自定义事实上的生成结果 |
-| `outputs/rome_results.json` | ROME 对 10 条自定义事实逐条编辑后的结果 |
-| `outputs/memit_results.json` | MEMIT 对 10 条 benchmark 样例批量编辑后的结果 |
-| `outputs/metrics.json` | ES、PS、NS 综合指标 |
-
-指标结果如下：
-
-| 方法 | ES | PS | NS |
+| 方法 | ES (编辑成功率) | PS (泛化性) | NS (局部性) |
 | --- | ---: | ---: | ---: |
 | Baseline | 10.00% | 0.00% | 30.00% |
 | ROME | 10.00% | 0.00% | 30.00% |
 | MEMIT | 0.00% | 0.00% | 10.00% |
 
-## 说明
+- ES (Efficacy)：直接编辑提示下，模型生成结果是否包含目标新答案。
+- PS (Paraphrase)：同义改写提示下，模型生成结果是否仍包含目标新答案。
+- NS (Neighborhood)：无关事实提示下，模型是否保留原答案。
 
-- 默认模型为 `Qwen/Qwen2.5-0.5B-Instruct`。
-- 评估采用简单字符串包含规则：生成结果中包含目标答案即视为命中。
-- ROME 和 MEMIT 的 EasyEdit 内部 rewrite accuracy 有提升，但自由生成的精确字符串命中率较低，详细分析见 `reports/REPORT.md`。
-- MEMIT 500 条完整实验属于资源消耗较大的设置，本地提交中保留了 10 条轻量批量实验结果。
+---
+
+## 结果分析
+
+从 EasyEdit 内部 rewrite accuracy 看，ROME 对 10 条自定义事实逐条编辑时能够将目标位置的 rewrite accuracy 提升到 1.0，MEMIT 在 10 条 ZsRE benchmark 样例上的内部 rewrite accuracy 也从约 0.3239 提升到约 0.8128。
+
+但在自由生成字符串匹配评估中，ES/PS/NS 指标提升不明显。主要原因包括：
+
+1. 字符串包含式评估较严格，同义表达、长解释或相邻事实都可能被判为未命中。
+2. `Qwen2.5-0.5B-Instruct` 在开放式 prompt 下倾向于生成完整句子，而不是只输出目标实体。
+3. MEMIT 轻量实验使用 10 条样例和 identity covariance 近似，不能完全代表 500 条完整 covariance MEMIT 设置。
+4. 小参数模型的知识存储密度较高，局部权重更新容易影响无关事实。
+
+详细实验过程、终端截图和失败案例见 `SC2616021-许宏宇-03-KnowledgeEditing.pdf`。
